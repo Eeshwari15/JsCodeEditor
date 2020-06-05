@@ -39,6 +39,7 @@ app.post('/parser', (req, res) => {
     Parser(name,codes,var_obj,filename);
     // res.sendStatus(200);
     cmd = name + ' ' +filename   //command to run script
+    console.log(cmd);
     exec(cmd,{timeout:5000, maxBuffer:1024*5},(error, stdout, stderr) => {
         
         // fs.unlink('temp'+filename, function(err) {
