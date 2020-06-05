@@ -3,8 +3,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const exec = require("child_process").exec; 
 var fs = require('fs'); 
+let cors = require("cors")
 
 const app = express();
+app.use(cors())
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
