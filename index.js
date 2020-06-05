@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 // app.use(bodyParser.raw());
 
 app.get('/',(req,res)=>{
-res.send('hello world');
+res.send('check');
 })
 
 app.post('/parser', (req, res) => {
