@@ -49,7 +49,7 @@ app.post('/parser', (req, res) => {
         //     }
         // })
         if (stderr) return res.send({status:'fail', error:stderr})
-        res.send({status:'success', output:JSON.parse(stdout)})
+        res.send({status:'success', output:stdout})
     })
     // JSON.parse(stdout)    
 }
